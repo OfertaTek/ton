@@ -274,8 +274,12 @@
             background: white; padding: 0.8rem 1rem;
             box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
             z-index: 100;
-            display: flex; align-items: center; justify-content: space-between;
+            display: flex; align-items: flex-start; justify-content: space-between;
+            gap: 0.5rem;
             border-top: 1px solid #e5e7eb;
+        }
+        .sticky-price {
+            display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem;
         }
         .sticky-price span:first-child { font-size: 0.75rem; color: #6b7280; }
         .sticky-price span:last-child { font-size: 1.1rem; font-weight: 800; color: var(--ton-dark); }
@@ -284,6 +288,7 @@
             font-weight: 700; padding: 0.6rem 1.2rem;
             border-radius: 25px; font-size: 0.9rem;
             white-space: nowrap; text-align: center;
+            flex-shrink: 0;
         }
 
         /* Footer helper classes */
@@ -340,6 +345,13 @@
             
             footer { padding-bottom: 2rem; }
         }
+
+        /* Regra para esconder o botão do topo em celulares muito pequenos */
+        @media (max-width: 397px) {
+            .header-inner .btn-header {
+                display: none !important;
+            }
+        }
     </style>
     
     <!-- Google Analytics -->
@@ -366,7 +378,7 @@
                 <img src="img/Ton_Parceiro_Logo.avif" alt="Logo Parceiro Ton Autorizado" width="80" height="80" style="margin: 0;">
             </div>
             <a href="https://ton.com.br/checkout/cart/?productId=TONBLACK_TIER_SMART_POS&referrer=D1B7AB60-6D0E-42A8-B876-7FA87148F094&userAnticipation=0&userTag=tonblack_tier&utm_medium=invite_share&utm_source=revendedor" 
-               class="btn-cta-dark hidden-mobile" 
+               class="btn-cta-dark hidden-mobile btn-header" 
                style="font-size: 0.9rem; padding: 0.75rem 1.5rem;"
                rel="noopener noreferrer"
                target="_blank">
