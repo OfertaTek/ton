@@ -1,0 +1,16 @@
+{
+    "name": "OfertaTek - Ton T3 Smart Black",
+    "short_name": "OfertaTek",
+    "description": "Maquininha Ton T3 Smart Black com taxas a partir de 0,79%. Parceiro Renda Ton.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f5f7fa",
+    "theme_color": "#00b94d",
+    "icons": [
+        {
+            "src": "img/favicon.ico",
+            "sizes": "64x64",
+            "type": "image/x-icon"
+        }
+    ]
+}
